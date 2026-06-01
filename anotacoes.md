@@ -339,4 +339,169 @@ Cada endpoint possui uma função específica.
 
 ---
 
+🌐 Conceitos de Web / Sistema
+
+# API (Application Programming Interface)
+→ Interface que permite comunicação entre sistemas.
+→ No projeto: conecta front-end (JS) com back-end (FastAPI).
+
+# REST (arquitetura de API)
+→ Forma de organizar APIs usando HTTP.
+→ Usa métodos: GET, POST, PUT, DELETE.
+
+# HTTP
+→ Protocolo de comunicação da web.
+→ Usado para enviar requisições e respostas.
+
+# Requisição (request)
+→ Pedido enviado do front-end para o back-end.
+
+# JSON
+→ Formato de dados (parecido com objeto JS).
+→ Usado para trocar informações entre sistemas.
+
+⚙️ FASTAPI (BACK-END)
+
+# FastAPI
+→ Framework Python para criar APIs.
+→ Responsável pelas rotas do CRUD.
+→ Aparece no main.py.
+
+# Rotas (endpoints)
+→ Caminhos da API.
+→ Ex: /livros, /livros/{id}.
+
+# CRUD
+→ Create (POST), Read (GET), Update (PUT), Delete (DELETE).
+
+# Swagger
+→ Interface automática da API.
+→ Acessado em /docs.
+→ Permite testar rotas.
+
+# Pydantic
+→ Valida dados recebidos na API.
+→ Garante formato correto do JSON.
+
+# CORS
+→ Libera comunicação entre front e back-end.
+→ Sem isso o navegador bloqueia a API.
+
+🗄️ BANCO DE DADOS
+
+# SQLite
+→ Banco de dados local (arquivo .db).
+→ Armazena os livros.
+
+# SQLAlchemy
+→ Biblioteca que conecta Python ao banco.
+→ Cria tabelas e faz consultas.
+
+# Engine
+→ Conexão com o banco.
+
+# Session
+→ Responsável por executar ações no banco.
+
+💻 FRONT-END (HTML / CSS / JS)
+📄 HTML
+
+# HTML
+→ Estrutura da página.
+
+# div
+→ Caixa/organização de elementos.
+→ Usada para separar partes da tela.
+
+# class
+→ Nome para estilização no CSS.
+→ Ex: .card-livro.
+
+# id
+→ Identificador único.
+→ Usado no JS com getElementById.
+
+# form
+→ Formulário de envio de dados.
+→ Usado no cadastro de livros.
+
+# input
+→ Campo de entrada de dados.
+
+🎨 CSS
+
+# CSS
+→ Estilização da página.
+
+# reset (*)
+→ Zera estilos padrão do navegador.
+
+# flexbox
+→ Centraliza elementos.
+
+# grid
+→ Organiza em colunas/linhas.
+
+# hover
+→ Efeito quando passa o mouse.
+
+⚡ JAVASCRIPT
+
+# JavaScript
+→ Lógica do front-end.
+
+# variável
+→ Guarda valores.
+→ Ex: let livros = []
+
+# função
+→ Bloco de código que executa ações.
+
+# parâmetro
+→ Informação que entra na função.
+
+# objeto
+→ Estrutura com chave e valor.
+→ Ex: { titulo: "Livro" }
+
+# array (lista)
+→ Lista de valores.
+→ Ex: [1, 2, 3]
+
+# fetch()
+→ Faz requisição para API.
+
+# addEventListener
+→ Detecta ações do usuário.
+
+# DOM
+→ Elementos do HTML acessados pelo JS.
+
+# 🔄 FLUXO DO SISTEMA (IMPORTANTE)
+
+JavaScript → fetch()
+→ FastAPI recebe
+→ SQLAlchemy consulta SQLite
+→ SQLite retorna dados
+→ FastAPI responde em JSON
+→ JS recebe e mostra na tela
+
+# 🧠 CONCEITOS IMPORTANTES DE PROVA
+
+# Desacoplamento
+→ Front-end e back-end separados.
+
+# Cliente-servidor
+→ Cliente (HTML/JS) pede dados
+→ Servidor (FastAPI) responde
+
+# Interface
+→ Parte visual que o usuário vê.
+
+# Lógica de programação
+→ Sequência de passos para resolver problemas.
+
+🔥 FRASE FINAL (DECORAR)
+
+O sistema segue uma arquitetura cliente-servidor, onde o front-end consome a API FastAPI, que se comunica com o banco SQLite, retornando dados em JSON de forma organizada e desacoplada.
 
